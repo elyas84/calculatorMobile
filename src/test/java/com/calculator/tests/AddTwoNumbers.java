@@ -20,7 +20,7 @@ public class AddTwoNumbers extends TestBase{
         driver.findElement(digit_02).click();
         driver.findElement(equalOperation).click();
         String result = driver.findElement(formula).getText();
-        Assert.assertEquals(result, "4");
+        Assert.assertEquals(result, "3");
         Assert.assertTrue(driver.findElement(By.id("result")).isDisplayed());
 
     }
