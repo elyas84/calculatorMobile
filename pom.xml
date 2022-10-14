@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.calculator</groupId>
@@ -23,7 +23,6 @@
       <artifactId>java-client</artifactId>
       <version>8.2.0</version>
     </dependency>
-
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
       <groupId>org.testng</groupId>
@@ -32,5 +31,32 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+            <debug>true</debug>
+            <encoding>utf-8</encoding>
+            <optimize>true</optimize>
+          </configuration>
+        </plugin>
 
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.18.1</version>
+          <configuration>
+            <!-- Suite testng xml file to consider for test execution -->
+            <suiteXmlFiles>
+              <suiteXMLFile>testing.xml</suiteXMLFile>
+            </suiteXmlFiles>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
