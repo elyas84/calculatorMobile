@@ -20,7 +20,6 @@ import java.net.URL;
 import java.time.Duration;
 
 public class TestBase {
-
     protected static AppiumDriver driver;
     protected static ExtentReports extent;
     protected static ExtentSparkReporter spark;
