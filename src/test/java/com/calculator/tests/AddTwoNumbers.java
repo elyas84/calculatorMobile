@@ -25,6 +25,5 @@ public class AddTwoNumbers extends TestBase{
         String result = driver.findElement(formula).getText();
         Assert.assertEquals(result, "3");
         Assert.assertTrue(driver.findElement(By.id("result")).isDisplayed());
-
     }
 }
