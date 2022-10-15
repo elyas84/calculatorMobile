@@ -30,6 +30,11 @@
       <version>7.6.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version>
+    </dependency>
   </dependencies>
   <build>
     <pluginManagement>
@@ -44,7 +49,6 @@
             <optimize>true</optimize>
           </configuration>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
